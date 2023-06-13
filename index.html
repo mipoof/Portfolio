@@ -32,6 +32,9 @@
                 <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">作品</a></li>
                 <li class="nav-item"><a class="nav-link" href="#signup">聯絡</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="index2.html">草莓蛋糕</a></li>
+
             </ul>
         </div>
     </div>
@@ -256,43 +259,6 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
 
-
-<!-- 0425下午網頁課 -->
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-<script>
-    $(function (){
-        console.log("hi!")
-
-        CallAPI("台中市南屯區嶺東路1號");
-    });
-
-    function  CallAPI(addr){
-        console.log("call..." + addr);
-
-        var url = "http://zip5.5432.tw/zip5json.py?adrs="+addr;
-        console.log(url); //for debug
-        $.ajax({
-            url: url,
-            dataType: "json",
-            type: "get",
-            //data:data,
-            //Type: Function(Anything data, String textStatus, jqXHR jqXHR)
-            success: function(data, textStatus, jqXHR) {
-                console.log(JSON.stringify(data));
-                console.log(data.zipcode6);
-            },
-            //Type: Function(jqXHR jqXHR, String textStatus, String errorThrown)
-            error: function(jqXHR, textStatus, errorThrown) {
-
-            }
-        });
-
-        console.log("call...END");
-
-    }
-
-
-</script>
 
 </body>
 </html>
